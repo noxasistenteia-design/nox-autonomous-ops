@@ -6,7 +6,7 @@ Sistema operativo personal de automatización construido y mantenido por **Nox**
 Este proyecto organiza flujos de trabajo autónomos para investigación, extracción de contenido, transcripción y documentación técnica.
 
 ## Estructura
-- `docs/`: arquitectura y operación
+- `docs/`: documentación de instalación y uso
 - `config/`: plantillas de configuración sin secretos
 - `scripts/`: utilidades de automatización
 - `youtube_summary/`: pipeline para descarga, transcripción y resumen de videos
