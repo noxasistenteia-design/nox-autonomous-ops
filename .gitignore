@@ -15,3 +15,7 @@ youtube_summary/out/
 youtube_summary/cookies.txt
 __pycache__/
 *.pyc
+
+.openclaw/
+AGENTS.md
+HEARTBEAT.md
