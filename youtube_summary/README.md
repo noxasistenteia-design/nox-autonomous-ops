@@ -75,3 +75,31 @@ yt-dlp \
   -o "%(title)s.%(ext)s" \
   "https://youtu.be/ID_DEL_VIDEO"
 ```
+
+
+## ¿Requiere API de IA externa?
+
+No. **Este proyecto funciona sin API externa**.
+
+### Cómo resume sin API externa
+El servicio usa un enfoque local:
+1. obtiene transcripción del contenido,
+2. limpia ruido y repeticiones,
+3. segmenta en oraciones,
+4. aplica resumen extractivo (selección de frases representativas del texto).
+
+Resultado: resumen útil sin depender de proveedores externos.
+
+## Uso opcional con API de IA externa
+
+Si quieres un estilo de resumen más elaborado/generativo, puedes integrar una API externa (opcional).
+
+### Configuración sugerida (opcional)
+1. Exportar la clave en entorno:
+```bash
+export OPENAI_API_KEY="TU_API_KEY"
+```
+2. Extender `service.py` para detectar la variable y usar el proveedor cuando exista.
+3. Si la variable no está definida, mantener fallback local (modo actual).
+
+> Recomendación: dejar siempre el fallback local activo para no romper el flujo cuando no haya API.
