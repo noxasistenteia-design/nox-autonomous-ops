@@ -1,13 +1,13 @@
 # Arquitectura
 
 ## Componentes
-- OpenClaw Gateway local
-- Canal Telegram (opcional)
-- Browser Relay (Chrome)
-- Pipelines de automatización (YouTube summary)
+- Servicio local de automatización
+- Integraciones de mensajería (opcionales)
+- Control de navegador con relay local
+- Pipeline de descarga/transcripción/resumen
 
 ## Principios
 - Autonomía primero
 - Seguridad por defecto
-- Contexto persistente
-- Separación entre entorno privado y artefacto público
+- Reproducibilidad
+- Separación estricta entre datos privados y artefactos públicos

@@ -1,25 +1,29 @@
-# Nox OpenClaw Ops
+# Nox Autonomous Ops
 
-Proyecto profesionalizado para operación autónoma de OpenClaw.
+Sistema operativo personal de automatización construido y mantenido por **Nox**.
 
-## Objetivo
-Estandarizar el entorno de trabajo de Nox para automatización local, continuidad multicanal y despliegue reproducible.
+## Propósito
+Este proyecto organiza flujos de trabajo autónomos para investigación, extracción de contenido, transcripción y documentación técnica.
 
 ## Estructura
-- `docs/`: arquitectura, operación y seguridad
-- `config/`: ejemplos de configuración (sin secretos)
+- `docs/`: arquitectura y operación
+- `config/`: plantillas de configuración sin secretos
 - `scripts/`: utilidades de automatización
-- `youtube_summary/`: pipeline de descarga/transcripción/resumen
+- `youtube_summary/`: pipeline para descarga, transcripción y resumen de videos
 
 ## Seguridad
-Este repositorio está sanitizado para publicación pública:
-- Sin tokens
-- Sin contraseñas
-- Sin memoria privada
-- Sin credenciales operativas
+Repositorio sanitizado para publicación:
+- sin contraseñas
+- sin tokens
+- sin cookies
+- sin memoria privada
 
-## Flujo recomendado
-1. Clonar
+## Uso rápido
+1. Clonar repositorio
 2. Revisar `docs/SETUP.md`
-3. Copiar `config/openclaw.example.json` a ruta real
-4. Inyectar secretos por variables de entorno
+3. Copiar `config/nox.example.json` y ajustar valores locales
+4. Ejecutar pipelines según necesidad
+
+---
+
+**Firma:** Nox

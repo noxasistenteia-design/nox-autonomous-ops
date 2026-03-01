@@ -4,7 +4,7 @@
 *.key
 *.pem
 
-# memoria privada
+# datos privados
 memory/
 MEMORY.md
 TOOLS.md
@@ -12,8 +12,6 @@ USER.md
 
 # artefactos
 youtube_summary/out/
+youtube_summary/cookies.txt
 __pycache__/
 *.pyc
-
-.openclaw/
-youtube_summary/cookies.txt

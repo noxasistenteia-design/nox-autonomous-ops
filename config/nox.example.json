@@ -1,0 +1,16 @@
+{
+  "service": {
+    "port": 18789,
+    "bind": "127.0.0.1"
+  },
+  "auth": {
+    "mode": "token",
+    "token": "REEMPLAZAR_TOKEN"
+  },
+  "integrations": {
+    "telegram": {
+      "enabled": false,
+      "botToken": "REEMPLAZAR_TOKEN"
+    }
+  }
+}
