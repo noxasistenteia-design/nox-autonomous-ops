@@ -28,4 +28,50 @@ curl -s -X POST http://127.0.0.1:8091/summarize \
   }' | jq
 ```
 
-Si un video requiere sesión, pasa `cookies_file` con cookies exportadas.
+## Cuando YouTube bloquea (usar cookies)
+
+Si YouTube pide inicio de sesión o muestra bloqueo anti-bot, usa `cookies_file`.
+
+### 1) Exportar cookies desde el navegador
+1. Inicia sesión en YouTube en tu navegador.
+2. Instala la extensión **Get cookies.txt LOCALLY**.
+3. En `https://www.youtube.com`, exporta cookies.
+4. Guarda el archivo como, por ejemplo:
+   - `/home/USUARIO/Descargas/www.youtube.com_cookies.txt`
+
+### 2) Probar con cookies en la API
+
+```bash
+curl -s -X POST http://127.0.0.1:8091/summarize \
+  -H 'content-type: application/json' \
+  -d '{
+    "url":"https://youtu.be/ID_DEL_VIDEO",
+    "language":"es",
+    "model_size":"small",
+    "cookies_file":"/home/USUARIO/Descargas/www.youtube.com_cookies.txt"
+  }' | jq
+```
+
+## Descarga directa (sin API)
+
+### Video + audio
+```bash
+yt-dlp \
+  --cookies /home/USUARIO/Descargas/www.youtube.com_cookies.txt \
+  --js-runtimes node \
+  --impersonate chrome \
+  -f "bestvideo+bestaudio/best" \
+  -o "%(title)s.%(ext)s" \
+  "https://youtu.be/ID_DEL_VIDEO"
+```
+
+### Solo audio (mp3)
+```bash
+yt-dlp \
+  --cookies /home/USUARIO/Descargas/www.youtube.com_cookies.txt \
+  --js-runtimes node \
+  --impersonate chrome \
+  -x --audio-format mp3 \
+  -o "%(title)s.%(ext)s" \
+  "https://youtu.be/ID_DEL_VIDEO"
+```
