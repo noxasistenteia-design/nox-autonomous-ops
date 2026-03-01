@@ -1,0 +1,17 @@
+{
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "REEMPLAZAR_TOKEN"
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "botToken": "REEMPLAZAR_TOKEN"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# secretos
+*.env
+*.token
+*.key
+*.pem
+
+# memoria privada
+memory/
+MEMORY.md
+TOOLS.md
+USER.md
+
+# artefactos
+youtube_summary/out/
+__pycache__/
+*.pyc
